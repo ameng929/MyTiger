@@ -1,3 +1,4 @@
+
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -12,9 +13,10 @@ import parser.Parser;
 
 public class Tiger
 {
+  
   public static void main(String[] args)
   {
-    InputStream fstream;
+    BufferedInputStream fstream;
     Parser parser;
 
     // ///////////////////////////////////////////////////////
@@ -46,9 +48,15 @@ public class Tiger
         fstream = new BufferedInputStream(new FileInputStream(fname));
         Lexer lexer = new Lexer(fname, fstream);
         Token token = lexer.nextToken();
+<<<<<<< HEAD
         while (token.kind != Kind.TOKEN_EOF) {
           System.out.println(token.toString());
           token = lexer.nextToken();
+=======
+        while (token.kind!=Kind.TOKEN_EOF){
+          //System.out.println(token.toString());
+          token = lexer.nextToken();//the method toString() run again??
+>>>>>>> Lab1
         }
         fstream.close();
       } catch (Exception e) {

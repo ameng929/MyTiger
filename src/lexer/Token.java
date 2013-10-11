@@ -21,7 +21,7 @@ public class Token
     TOKEN_EOF, // EOF
     TOKEN_EXTENDS, // "extends"
     TOKEN_FALSE, // "false"
-    TOKEN_ID, // Identifier
+    TOKEN_ID, // Identifier        lexeme!!!!
     TOKEN_IF, // "if"
     TOKEN_INT, // "int"
     TOKEN_LBRACE, // "{"
@@ -32,7 +32,7 @@ public class Token
     TOKEN_MAIN, // "main"
     TOKEN_NEW, // "new"
     TOKEN_NOT, // "!"
-    TOKEN_NUM, // IntegerLiteral
+    TOKEN_NUM, // IntegerLiteral    lexeme!!!!
     // "out" is not a Java key word, but we treat it as
     // a MiniJava keyword, which will make the
     // compilation a little easier. Similar cases apply
@@ -80,8 +80,8 @@ public class Token
     String s;
 
     // to check that the "lineNum" field has been properly set.
-    if (this.lineNum == null)
-      new util.Todo();
+    //if (this.lineNum == null)
+      //new util.Todo();
 
     s = ": " + ((this.lexeme == null) ? "<NONE>" : this.lexeme) + " : at line "
         + this.lineNum.toString();
